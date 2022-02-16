@@ -93,21 +93,30 @@ c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
 
+#Apartado a
+df_mammals <- mammals
+df_mammals
 
+df_animals2 <- Animals2
+df_animals2
 
+#Apartado b
+dim(df_mammals)
+head(df_mammals)
+tail(df_mammals)
+str(mammals)
 
+dim(df_animals2)
+head(df_animals2)
+tail(df_animals2)
+str(df_animals2)
 
+#Apartado c
+rownames(df_mammals)
+colnames(df_mammals)
 
-
-
-
-
-
-
-
-
-
-
+rownames(df_animals2)
+colnames(df_animals2)
 
 ```
 
