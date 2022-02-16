@@ -225,9 +225,9 @@ summary(Chile)
 
 ```{r}
 
-
-
-
+qqPlot(cabbages$HeadWt)
+qqPlot(cabbages$VitC)
+#Como podemos ver en los gráficos todos los puntos estan dentro de las lineas y por tanto podemos asumir que ambas variables siguen una distribución Gaussiana
 
 ```
 
