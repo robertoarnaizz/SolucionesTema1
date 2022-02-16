@@ -235,7 +235,11 @@ qqPlot(cabbages$VitC)
 
 ```{r}
 
+levels(cabbages$Cult) #Obtenemos que variedades de cultivo hay
 
+#Mostramos los histogramas para cada tipo de cultivo
+hist(cabbages$VitC[cabbages$Cult == "c39"])
+hist(cabbages$VitC[cabbages$Cult == "c52"])
 
 ```
 
