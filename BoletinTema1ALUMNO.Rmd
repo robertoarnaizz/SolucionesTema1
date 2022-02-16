@@ -180,7 +180,6 @@ head(libReturn$results, 5)
 #Apartado c
 nrow(libReturn$results) #El número de librerias es igual al numero de filas de la matriz que contiene las librerias instaladas.
 
-
 ```
 
 4.  En las transparencias del tema 1 se citan los primeros pasos a seguir cuando se analiza un nuevo conjunto de datos.
@@ -192,31 +191,33 @@ nrow(libReturn$results) #El número de librerias es igual al numero de filas de 
 
 ```{r}
 
+#Conjunto de datos cabbage
 
+#Apartado a
+library(MASS) #Cargamos la librería necesaria.
+nrow(cabbages)
+ncol(MASS::cabbages) #Otra forma es acceder asi.
+str(cabbages)
+sum(is.na(cabbages)) #Número de valores perdidos en todo el data frame
 
+#Apartado b
+colSums(sapply(cabbages, is.na))
 
+#Conjunto de datos Chile
 
+#Apartado a
+library(car) #Cargamos la librería necesaria.
+nrow(Chile)
+ncol(Chile)
+str(Chile)
+sum(is.na(Chile))
 
+#Apartado b
+colSums(sapply(Chile, is.na))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#Apartado d
+summary(cabbages)
+summary(Chile)
 
 ```
 
