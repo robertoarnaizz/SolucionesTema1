@@ -168,18 +168,20 @@ qqPlot(log(df_Animals2$brain))
     b.  Uno de los elementos de la lista es un matriz de caracteres. Muestra por pantalla los 5 primeros elementos de esta matriz usando la función **head**.
     c.  Determina el número de librerías que tienes instaladas.
 
-    ```{r}
+```{r}
+
+#Apartado a
+libReturn <- library()
+str(libReturn)
+
+#Apartado b
+head(libReturn$results, 5)
+
+#Apartado c
+nrow(libReturn$results) #El número de librerias es igual al numero de filas de la matriz que contiene las librerias instaladas.
 
 
-
-
-
-
-
-
-
-
-    ```
+```
 
 4.  En las transparencias del tema 1 se citan los primeros pasos a seguir cuando se analiza un nuevo conjunto de datos.
 
