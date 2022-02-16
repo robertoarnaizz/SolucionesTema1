@@ -7,10 +7,10 @@ params:
   lang: ES
 lang: "`r switch(params$lang, ES = 'es-ES', EN = 'en-US')`"
 output:
-  pdf_document:
-    toc: no
-    toc_depth: 3
-    number_sections: yes
+  # pdf_document:
+  #   toc: no
+  #   toc_depth: 3
+  #   number_sections: yes
   html_notebook:
     echo: yes
     number_sections: yes
@@ -124,38 +124,27 @@ d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los 
 
 ```{r}
 
-
-
-
-
-
+#Apartado d
+commonAnimals <- intersect(rownames(df_animals2), rownames(df_mammals)) #Uso rownames, porque solo quiero comparar los nombres de los animales.
+commonAnimals
+length(commonAnimals)
 ```
 
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
+#Animales en mammals pero no en Animals2
+noncommonAnimals <- setdiff(rownames(df_mammals), rownames(df_animals2))
+noncommonAnimals
 
-
-
-
-
-
+#Animales en Animals2 pero no en mammals
+noncommonAnimals1 <- setdiff(rownames(df_animals2), rownames(df_mammals))
+noncommonAnimals1
 ```
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 
 ```{r}
-
-
-
-
-
-
-
-
-
-
-
 
 ```
 
@@ -163,6 +152,13 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 
 ```{r}
 
+#Mamals
+qqPlot(log(df_mammals$brain))
+
+#Animals2
+qqPlot(log(df_Animals2$brain))
+
+#Ambas distribuciones presentan el mismo comprtamiento, como las muestras estan dentro de las lineas podemos afirmar que ambas siguen una distribución Gaussiana.
 
 ```
 
